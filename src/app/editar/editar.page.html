@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="font-size: 25px; text-align: center;">
+      YourTask <ion-icon style="font-size: 25px;" class="ion-align-items-center" name="finger-print-outline"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Titulo:</ion-label>
+      <ion-input type="text" [(ngModel)]="tarefa.titulo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Descrição:</ion-label>
+      <ion-textarea type="text" [(ngModel)]="tarefa.descricao"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label>Prioridade:</ion-label>
+      <ion-select placeholder="" [(ngModel)]="tarefa.prioridade">
+        <ion-select-option value="B">Baixa</ion-select-option>
+        <ion-select-option value="Média">Média</ion-select-option>
+        <ion-select-option value="Alta">Alta</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <br>
+  <i-card class="ion-margin">
+    <ion-button expand="block" shape="round" (click)="save()">
+      Salvar
+    </ion-button>
+  </i-card>
+  <i-card class="ion-margin">
+    <ion-button expand="block" shape="round" (click)="remove()">
+      Excluir
+    </ion-button>
+  </i-card>
+  <i-card>
+    <ion-button expand="block" shape="round" routerLink="/home">
+      Voltar
+    </ion-button>
+  </i-card>
+</ion-content>

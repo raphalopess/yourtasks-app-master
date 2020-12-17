@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="font-size: 25px; text-align: center;">
+      YourTask <ion-icon style="font-size: 25px;" class="ion-align-items-center" name="finger-print-outline"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list id="inputs">
+    <ion-item>
+      <ion-input placeholder="Usuário" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Senha" type="Password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button class="button" shape="round" expand="full" (click)="goLogin()">Entrar</ion-button>
+  <ion-button class="button" shape="round" expand="full" color="light" (click)="goRegister()">Cadastrar-se</ion-button>
+
+</ion-content>
+

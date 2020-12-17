@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="font-size: 25px; text-align: center;">
+      YourTask <ion-icon style="font-size: 25px;" class="ion-align-items-center" name="finger-print-outline"></ion-icon>
+    </ion-title>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="close()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card class="ion-padding">
+    <h1>{{Tarefa.titulo}}</h1>
+    <h2>{{Tarefa.descricao}}</h2>
+    <h2>Prioridade: {{Tarefa.prioridade}}</h2>
+  </ion-card>
+
+</ion-content>

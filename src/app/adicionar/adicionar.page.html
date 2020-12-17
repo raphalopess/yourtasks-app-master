@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="font-size: 25px; text-align: center;">
+      YourTask <ion-icon style="font-size: 25px;" class="ion-align-items-center" name="finger-print-outline"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Adicionar tarefa:</h2>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Titulo:</ion-label>
+      <ion-input type="text" [(ngModel)]="tarefa.titulo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position=" floating">Descrição:</ion-label>
+      <ion-textarea type="text" [(ngModel)]="tarefa.descricao"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label>Prioridade:</ion-label>
+      <ion-select placeholder="" [(ngModel)]="tarefa.prioridade">
+        <ion-select-option value="Baixa">Baixa</ion-select-option>
+        <ion-select-option value="Media">Média</ion-select-option>
+        <ion-select-option value="Alta">Alta</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button expand="block" shape="round" (click)="adicionar()">
+      Adicionar
+    </ion-button>
+  </ion-list>
+  <br>
+
+  <i-card>
+    <ion-button expand="block" shape="round" routerLink="/home">
+      Voltar
+    </ion-button>
+  </i-card>
+
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-content class="ion-padding">
+  <div *ngFor="let t of tarefas" class="tarefa ion-align-items-center">
+    <i-row>
+      <label (click)="showDetails(t)" style=" font-size: 20px;">{{t.titulo}}</label>
+      <br>
+      <ion-row>
+        <ion-col> <label>{{t.prioridade}}</label></ion-col>
+      </ion-row>
+    </i-row>
+    <i-col>
+      <ion-button color="medium" [routerLink]="['/editar', t.id]">
+        <ion-icon name="pencil-outline"></ion-icon>
+      </ion-button>
+    </i-col>
+  </div>
+
+  <i-card>
+    <ion-button expand="block" shape="round" routerLink="/adicionar">
+      Adicionar tarefa
+    </ion-button>
+  </i-card>
+</ion-content>
